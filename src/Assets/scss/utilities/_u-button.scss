@@ -1,0 +1,167 @@
+/*
+ * Button utility
+ */
+
+ %button {
+     border-radius: 30px;
+     padding: 0 $spacing--small;
+     line-height: 3;
+     display: inline-block;
+     text-align: center;
+     color: palette(bw, white);
+     //color: palette(secondary, base); 
+     @include set-font-size(1.7rem, 1.7rem, 1.7rem, 1.7rem);
+     font-family: font-family(primary, 600);
+
+     &:first-of-type {
+         margin-right: $spacing--small;
+     }
+ }
+
+ 
+
+ %button--solid {
+    background-color: palette(secondary, base);
+ }
+
+ %button--outline {
+    border: 1px solid palette(secondary, base);
+ }
+
+
+
+ .button, input[type="submit"] {
+     @extend %button;
+ }
+
+ input[type="submit"] {
+    @extend %button--solid;
+ }
+
+.button--solid {
+    @extend %button--solid;
+    //color: palette(bw, white);
+}
+
+.button--outline {
+    @extend %button--outline;
+}
+
+
+
+.c-site-nav {
+
+    .menu-button {
+        margin-right: 0;
+        margin-left: $spacing--tiny;
+
+        a {
+            @extend %button;
+            padding: 0;
+            margin: 0;
+            display: inline;
+            padding: $spacing--tiny $spacing--x-medium;
+            font-size: inherit;
+            
+            &:first-of-type {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            &:after {
+                display: none;
+            }
+
+            //Hover
+            &:hover {
+                color: palette(bw, white);
+            }
+
+        }
+
+    }
+    
+    .menu-button--solid {
+        margin-left: $spacing--x-medium;
+        a {
+            @extend %button--solid;
+        }
+    }
+    
+    .menu-button--outline {
+        a {
+            @extend %button--outline;
+        }
+    }
+ }
+
+
+ .c-hero {
+
+    .button {
+        min-width: 250px;
+    }
+
+ }
+
+
+ .c-site-nav .menu-button--solid a {
+     color: palette(bw, white); 
+ }
+ .c-site-nav .menu-button--outline a {
+     color: palette(secondary, base); 
+ }
+
+
+
+//  .c-site-nav {
+//     .menu-button {
+//         .home {
+//             .menu-button--solid,
+//             .menu-button--outline {
+//                 a {
+//                     color: palette(bw, white);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+// .u-button, input[type="submit"] {
+//     cursor: pointer;
+//     user-select: none;
+//     background-color: palette(quaternary, base);
+//     color: palette(bw, white);
+//     display: inline-block;
+//     text-transform: uppercase;
+//     font-family: font-family(primary, 400);
+//     padding: $spacing--small $spacing--large-x;
+//     @include set-font-size(1.2rem, 1.4rem, 1.4rem, 1.4rem);
+//     line-height: 1.25;
+//     border-radius: 50px;
+//     position: relative;
+
+//     &:focus {
+//         outline: 0;
+//     }
+
+//     &--disabled {
+//         cursor: not-allowed;
+
+//         &:hover {
+//             cursor: not-allowed;
+//         }
+//     }
+    
+// }
+
+// .u-button--small {
+//     padding: $spacing--tiny $spacing--small;
+// }
+
+// input[type="submit"] {
+//     padding: $spacing--x-small $spacing--medium;
+// }

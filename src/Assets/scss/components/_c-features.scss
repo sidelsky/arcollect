@@ -1,0 +1,36 @@
+.c-features {
+
+   //color: palette(bw, white);
+   lost-flex-container: row;
+   margin: 0 auto;
+
+   &__description {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      margin-top: -$spacing--small;
+      @include set-font-size(1.6rem, 1.6rem, 1.6rem, 1.6rem);
+
+      p {
+         text-align: center;
+      }
+   }
+
+   &__quote-mark {
+      text-align: center;
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: $spacing--medium 0;
+      
+      svg {
+         $dimensions: 50px;
+         width: $dimensions;
+         height: $dimensions;
+         margin: 0 auto;
+         display: block;
+      }
+
+   }
+
+}

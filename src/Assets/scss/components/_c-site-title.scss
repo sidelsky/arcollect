@@ -1,0 +1,17 @@
+.c-site-title {
+
+    &__link {
+        position: relative;
+        display: inline-block;
+    }
+    
+    
+    &__icon {
+        height: 25px;
+        position: absolute;
+        top: -18px;
+        z-index: 0;
+    }
+    
+   
+}

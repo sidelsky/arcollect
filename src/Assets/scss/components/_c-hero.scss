@@ -1,0 +1,105 @@
+/** 
+* Hero
+*/
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.c-hero {
+   color: palette(bw, white);
+   position: relative;
+   //padding: 70px 0;
+   background-color: palette(primary, base);
+   background-repeat: no-repeat;
+   background-position: right bottom;
+   background-size: 75%;
+   
+   @include media('>tablet') {
+        //padding: 120px 0;
+        height: 100vh;
+        display: block;    
+    }
+
+   //Content
+   &__content {
+      max-width: 570px;
+      //Large title
+      &--large {
+         @include set-font-size(1.8rem, 1.8rem, 1.8rem, 1.8rem);
+         line-height: 1.35;
+
+         @include media('>tablet') {
+            line-height: 1.5;
+         }
+
+      }
+
+      p {
+         margin-bottom: $spacing--large-x;
+         line-height: 1.6;
+      }
+
+   }
+
+   //Scroll Icon
+   &__scroll-icon {
+       text-align: center;
+       position: absolute;
+       width: 100%;
+       bottom: 200px;
+   }
+
+   .button {
+      
+      @include media('<tablet') {
+         margin-bottom: $spacing--small;
+         width: 100%;
+         
+      &:last-of-type {
+         margin-bottom: $spacing--large;
+      }
+
+     }
+
+   }
+
+
+}
+
+
+//Store icons
+.store-icons {
+  position: relative;
+  z-index: 1;
+
+   &__href{
+      display: inline-block;
+      margin-right: $spacing--tiny;
+
+      @include media('>tablet') {
+        margin-right: $spacing--small;
+        }
+
+   }
+   
+   &__icon {
+        height: 45px;
+        width: auto;
+
+      @include media('>tablet') {
+        height: 50px;
+        }
+
+   }
+
+}
+

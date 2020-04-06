@@ -1,0 +1,17 @@
+ body.home.is-scrolled {
+
+   > .header {
+        background-color: palette(primary, base);
+    }
+
+}
+
+
+
+body.is-scrolled {
+
+    > .header {
+         background-color: palette(bw, white);
+     }
+ 
+ }

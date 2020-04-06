@@ -1,0 +1,122 @@
+.c-faqs {
+    margin-bottom: $spacing--small;
+    padding-bottom: $spacing--small;
+    border-bottom: solid 1px palette(greys, x-light);
+    position: relative;
+    
+   
+    //Title
+    &__title {
+        font-family: font-family(primary, book);
+        display: block;
+        color: palette(greys, dark);
+        @include set-font-size(1.8rem, 1.8rem, 1.8rem, 1.8rem);
+        position: relative;
+        padding-right: $spacing--large;
+
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--no-descrpt {
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+
+    //Details
+    &__details {
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease 1000ms;
+    }
+
+    //Content
+    &__content {
+        padding-top: $spacing--small;
+        color: palette(greys, dark);
+    }
+
+
+
+    &.active {
+
+        .chevron {
+
+            &::before,
+            &::after { 
+                top: -5px;
+            }
+    
+            &::before {
+                transform: rotate(-135deg);
+            }
+        
+            &::after {
+                transform: rotate(135deg);
+            }
+            
+        }
+
+        > .c-faqs__title {
+            color: palette(bw, black);
+        }
+
+       > .c-faqs__details {
+            max-height: 1000px;
+        }
+
+    }
+
+    ul, ol {
+        padding: 0 0 0 22px;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+    
+    ul {
+        list-style-type: lower-alpha;
+        list-style-type: disc;
+    }
+
+    p, li {
+        margin-bottom: $spacing--small;
+    }
+
+}
+
+.chevron {
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+        background-color: palette(primary, base);
+        top: 0;
+        content: '';
+        position: absolute;
+        transform-origin: bottom center;
+        transition: all ease .3s;
+        height: .95em;
+        width: .10em;
+        right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &::before {
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        transform: rotate(45deg);
+    }
+
+
+}

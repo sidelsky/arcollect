@@ -1,0 +1,40 @@
+.c-promo-card {
+   margin-bottom: $spacing--medium;
+   //color: palette(bw, white);
+
+   //Content
+   &__content {
+      //lost-column: 10/12;
+      margin-left: 40px;
+      position: relative;
+
+      &:before {
+         $dimensions: 30px;
+         display: block;
+         content: '';
+         width: $dimensions;
+         height: $dimensions;
+         border-radius: 50px;
+         background-color: $light-blue;
+         position: absolute;
+         left: -40px;
+         top: -5px;
+         background-image: url('img/check.png');
+         background-size: 40%;
+         background-repeat: no-repeat;
+         background-position: center center;
+      }
+
+      @include media('>tablet') {
+        //lost-column: 10.5/12;
+      }
+
+      p {
+         @include set-font-size(1.6rem, 1.6rem, 1.6rem, 1.6rem);
+         line-height: 1.5;
+         //margin-bottom: $spacing--small;
+      }
+
+   }
+
+}

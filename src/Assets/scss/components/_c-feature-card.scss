@@ -1,0 +1,65 @@
+.c-feature-card {
+   text-align: center;
+   margin-bottom: $spacing--medium;
+
+   @include media('>tablet') {
+      //margin-bottom: 0;
+   }
+      
+      &.is_flex {
+         @include media('>tablet') {
+            lost-column: 4/12 3;
+         }
+      }
+
+      &.is_inline {
+         @include media('>tablet') {
+            display: inline-block;
+         }
+      }
+
+   //Title
+   &__title {
+      color: palette(bw, black);
+   }
+
+   //Icon
+   &__icon {
+      $dimensions: 75px;
+      background-color: $light-blue;
+      display: inline-block;
+      margin-bottom: $spacing--small;
+      padding: $spacing--small;
+      border-radius: 50%;
+      width: $dimensions;
+      height: $dimensions;
+   }
+
+   //Image
+   &__image {
+    display: inline-block;
+    //margin-bottom: $spacing--small;
+    padding: $spacing--small;
+    max-width: 55%;
+
+    img {
+        opacity: 0.8;
+    }
+
+   }
+
+   //Blockquote
+   &__blockquote {
+
+    p {
+        margin-bottom: $spacing--small;
+    }
+
+    cite {
+
+    }
+
+   }
+
+
+}
